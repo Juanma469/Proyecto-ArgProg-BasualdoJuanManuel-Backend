@@ -1,16 +1,16 @@
 package com.porfolio.argprog.Interface;
 
 import java.util.List;
-import com.porfolio.argprog.Entity.Persona;
+import com.porfolio.argprog.Entity.Usuario;
 
 public interface IPersonaService {
 	
-	public List<Persona> traerPersonas();
+	public List<Usuario> traerPersonas();
 	
-	public void guardarPersona (Persona persona);
+	public void guardarPersona (Usuario persona);
 	
 	public void borrarPersona (Long id);
 	
-	public Persona buscarPersona(Long id);
+	public Usuario buscarPersona(Long id);
 
 }

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.porfolio.argprog.Entity.Persona;
+import com.porfolio.argprog.Entity.Usuario;
 import com.porfolio.argprog.Interface.IPersonaService;
 
 @RestController
@@ -21,13 +21,13 @@ public class PersonaController {
 	public IPersonaService ipersonaservice;
 	
 	@GetMapping("persona/ver")
-	public List<Persona> traerPersonas(){
+	public List<Usuario> traerPersonas(){
 		return ipersonaservice.traerPersonas();
 	}
 	
 	
 	@PostMapping("persona/crear")
-	public String crearPersona(@RequestBody Persona persona) {
+	public String crearPersona(@RequestBody Usuario persona) {
 		ipersonaservice.guardarPersona(persona);
 		return "Se guardo correctamente";
 	}
@@ -40,11 +40,11 @@ public class PersonaController {
 	
 	
 	@PutMapping("persona/editar/{id}")
-	public Persona editarPersona(@PathVariable Long id,
+	public Usuario editarPersona(@PathVariable Long id,
 							   	 @RequestParam("nombre") String nNombre,
 								 @RequestParam("apellido") String nApellido,
 								 @RequestParam("img") String nImg) {
-		Persona persona = ipersonaservice.buscarPersona(id);
+		Usuario persona = ipersonaservice.buscarPersona(id);
 		
 		persona.setNombre(nNombre);
 		persona.setApellido(nApellido);
