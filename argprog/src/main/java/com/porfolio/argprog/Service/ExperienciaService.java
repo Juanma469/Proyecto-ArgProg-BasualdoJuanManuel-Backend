@@ -1,7 +1,6 @@
 
 package com.porfolio.argprog.Service;
 
-import com.porfolio.argprog.Entity.Educacion;
 import com.porfolio.argprog.Entity.Experiencia;
 import com.porfolio.argprog.Repository.ExperienciaRepo;
 import java.util.List;
