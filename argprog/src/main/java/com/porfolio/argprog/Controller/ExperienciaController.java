@@ -27,7 +27,7 @@ public class ExperienciaController {
     @PostMapping("/add")
     public ResponseEntity<Experiencia> addExperiencia(@RequestBody Experiencia experiencia) {
         Experiencia addExperiencia = experienciaService.addExperiencia(experiencia);
-        return new ResponseEntity<>(addExperiencia, HttpStatus.OK);
+        return new ResponseEntity<>(addExperiencia, HttpStatus.CREATED);
     }
 
     @GetMapping("/ver")
@@ -44,8 +44,9 @@ public class ExperienciaController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void borrarExperiencia(@PathVariable Long id) {
+    public ResponseEntity<?> borrarExperiencia(@PathVariable Long id) {
         experienciaService.borrarExperiencia(id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }

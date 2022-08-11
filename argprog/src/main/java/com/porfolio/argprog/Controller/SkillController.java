@@ -27,7 +27,7 @@ public class SkillController {
     @PostMapping("/add")
     public ResponseEntity<Skill> addSkill(@RequestBody Skill skill) {
         Skill addSkill = skillService.addSkill(skill);
-        return new ResponseEntity<>(addSkill, HttpStatus.OK);
+        return new ResponseEntity<>(addSkill, HttpStatus.CREATED);
     }
 
     @GetMapping("/ver")
@@ -44,8 +44,9 @@ public class SkillController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void borrarSkill(@PathVariable Long id) {
+    public ResponseEntity<?> borrarSkill(@PathVariable Long id) {
         skillService.borrarSkill(id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 }
