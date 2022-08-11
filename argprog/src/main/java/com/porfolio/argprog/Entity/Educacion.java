@@ -1,4 +1,3 @@
-
 package com.porfolio.argprog.Entity;
 
 import javax.persistence.Entity;
@@ -8,24 +7,32 @@ import javax.persistence.Id;
 
 @Entity
 public class Educacion {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String titulo;
     private String descripcion;
     private int fecha;
-    private String img; 
-    
-    
-    
-    public Educacion(){}
+    private String img;
 
-    public Educacion(Long id, String titulo, String descripcion ,int fecha, String img) {
+    public Educacion() {
+    }
+
+    public Educacion(Long id, String titulo, String descripcion, int fecha, String img) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.fecha = fecha;
         this.img = img;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public Long getId() {
@@ -59,5 +66,5 @@ public class Educacion {
     public void setImg(String img) {
         this.img = img;
     }
-    
+
 }

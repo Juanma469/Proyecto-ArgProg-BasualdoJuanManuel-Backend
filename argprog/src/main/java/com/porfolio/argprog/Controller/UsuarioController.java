@@ -21,8 +21,7 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
     
-    @GetMapping ("/id/{id}")
-    
+    @GetMapping ("/id/{id}")    
     public ResponseEntity<Usuario> obtenerUsuario(@PathVariable("id") Long id ){
         Usuario usuario = usuarioService.buscarUsuarioConId(id);
         return new ResponseEntity<>(usuario, HttpStatus.OK);
@@ -34,5 +33,13 @@ public class UsuarioController {
         return new ResponseEntity<>(updateUsuario, HttpStatus.OK);  
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
     
 }

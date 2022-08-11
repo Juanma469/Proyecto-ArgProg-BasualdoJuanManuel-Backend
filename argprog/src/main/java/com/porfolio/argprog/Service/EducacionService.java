@@ -18,6 +18,8 @@ public class EducacionService {
         this.educacionRepo = educacionRepo;
     }
     
+    
+    
     public Educacion  addEducacion (Educacion educacion){
         return educacionRepo.save(educacion);
     }
