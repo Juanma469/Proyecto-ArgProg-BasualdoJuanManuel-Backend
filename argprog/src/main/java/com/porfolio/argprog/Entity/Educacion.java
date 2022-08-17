@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Educacion {
@@ -11,9 +13,17 @@ public class Educacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
+    @NotEmpty()
     private String titulo;
+    
+    @NotEmpty()
+    @Size(min=10, max=200, message="La descripcion debe contener entre 10 y 200 caracteres")
     private String descripcion;
+    
+ 
     private int fecha;
+    
     private String img;
 
     public Educacion() {

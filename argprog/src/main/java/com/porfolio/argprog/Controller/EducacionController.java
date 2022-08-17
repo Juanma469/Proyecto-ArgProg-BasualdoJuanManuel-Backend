@@ -3,6 +3,7 @@ package com.porfolio.argprog.Controller;
 import com.porfolio.argprog.Entity.Educacion;
 import com.porfolio.argprog.Service.EducacionService;
 import java.util.List;
+import javax.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -27,10 +28,10 @@ public class EducacionController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<Educacion> addEducacion(@RequestBody Educacion educacion) {
+    public ResponseEntity<Educacion> addEducacion( @RequestBody  @Valid Educacion educacion) {
         Educacion addEducacion = educacionService.addEducacion(educacion);
         return new ResponseEntity<>(addEducacion, HttpStatus.CREATED);
-    }
+    } 
 
     @GetMapping("/ver")
     public ResponseEntity<List<Educacion>> buscarEducacion() {
