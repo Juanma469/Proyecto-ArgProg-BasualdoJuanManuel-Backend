@@ -14,11 +14,10 @@ public class Educacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @NotEmpty()
+ 
     private String titulo;
     
-    @NotEmpty()
-    @Size(min=10, max=200, message="La descripcion debe contener entre 10 y 200 caracteres")
+  
     private String descripcion;
     
  

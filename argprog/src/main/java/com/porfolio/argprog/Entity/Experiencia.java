@@ -12,18 +12,36 @@ public class Experiencia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String titulo;
+    private String puesto;
     private String descripcion;
     private int fecha;
     private String img;
     
     public Experiencia(){}
 
-    public Experiencia(Long id, String titulo, String descripcion ,int fecha, String img) {
+    public Experiencia(Long id, String titulo, String puesto, String descripcion ,int fecha, String img) {
         this.id = id;
         this.titulo = titulo;
+        this.puesto = puesto;
         this.descripcion = descripcion;
         this.fecha = fecha;
         this.img = img;
+    }
+    
+     public String getPuesto() {
+        return puesto;
+    }
+
+    public void setPuesto(String puesto) {
+        this.puesto = puesto;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public Long getId() {
