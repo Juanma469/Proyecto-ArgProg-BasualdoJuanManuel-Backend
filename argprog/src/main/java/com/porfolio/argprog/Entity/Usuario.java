@@ -19,31 +19,34 @@ public class Usuario implements Serializable {
         
 	private String nombre;
 	private String apellido;
-        private String titulo;
-        private String descripcion;
-        private String img;
+                  private String titulo;
+                  private String descripcion;
+                  private String img;
+                  
+                  private String linkedin;
 
-	
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "id" )
-        private List<Educacion> educacionList;
-        
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "id" )
-        private List<Experiencia> experienciaList;
-         
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "id" )
-        private List<Skill> skillList;
+
 
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String img) {
+    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String img, String linkein) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.img = img;
+        this.linkedin = linkein;
        
+    }
+
+    public String getLinkedin() {
+        return linkedin;
+    }
+
+    public void setLinkedin(String linkedin) {
+        this.linkedin = linkedin;
     }
 
     public Long getId() {
