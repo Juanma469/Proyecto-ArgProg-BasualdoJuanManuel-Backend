@@ -19,19 +19,22 @@ public class Educacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column
+   
     @NotBlank
-    @Size(min = 4, max=20, message = "el nombre debe contener entre 4 y 20 caracteres")
+    @Size(min = 4, max = 40, message = "el titulo debe contener entre 4 y 20 caracteres")
+    @Column
     private String titulo;
     
-    @Column
+    
     @NotBlank
-    @Size(min = 10, max=200, message = "la descripcion debe contener entre 10 y 200 caracteres)")
+    @Size(min = 10, max= 200, message = "la descripcion debe contener entre 10 y 200 caracteres)")
+    @Column(length = 300)
     private String descripcion;
     
-    @Column
+   
     @Min(1965) @Max(2022)
     @NotNull
+    @Column
     private int fecha;
     
     @Column

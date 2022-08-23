@@ -1,14 +1,13 @@
 package com.porfolio.argprog.Entity;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Usuario implements Serializable {
@@ -17,13 +16,35 @@ public class Usuario implements Serializable {
         @Column (nullable = false, updatable = false)
 	private Long id;
         
+        
+        @NotBlank
+        @Size(min = 4, max= 40, message = "el nombre debe contener entre 4 y 45 caracteres")
+        @Column
 	private String nombre;
+        
+        
+        @NotBlank
+        @Size(min = 4, max= 40, message = "el apellido debe contener entre 4 y 30 caracteres")
+        @Column
 	private String apellido;
-                  private String titulo;
-                  private String descripcion;
-                  private String img;
-                  
-                  private String linkedin;
+        
+       
+        @NotBlank
+        @Size(min = 4, max= 50, message = "el titulo debe contener entre 4 y 40 caracteres")
+        @Column
+        private String titulo;
+        
+        
+        @NotBlank
+        @Size(min = 10, max = 300, message = "la descripcion debe contener entre 10 y 200 caracteres")
+        @Column
+        private String descripcion;
+        
+        @Column
+        private String img;
+
+        @Column
+        private String linkedin;
 
 
 
