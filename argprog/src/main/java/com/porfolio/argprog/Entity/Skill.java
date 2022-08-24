@@ -25,8 +25,9 @@ public class Skill {
     private String nombre;
     
     
-    @Min(0) @Max(100)
+    
     @NotNull
+    @Min(0) @Max(100)
     @Column
     private int porcentaje;
      

@@ -26,7 +26,7 @@ public class Proyectos {
     
     
     @NotBlank
-    @Size(min = 3, max=100, message = "la tecnologias debe contener entre 3 y 100 caracteres)")
+    @Size(min = 3, max = 200, message = "la tecnologias debe contener entre 3 y 100 caracteres)")
     @Column
     private String tecno;
     
@@ -38,8 +38,9 @@ public class Proyectos {
     
     
     
-    @Min(1965) @Max(2022)
+    
     @NotNull
+    @Min(1965) @Max(2022)
     @Column
     private int fecha;
     
