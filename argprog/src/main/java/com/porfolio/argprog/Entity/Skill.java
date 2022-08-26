@@ -20,12 +20,12 @@ public class Skill {
     
     
     @NotBlank
-    @Size(min = 3, max = 20, message = "el nombre debe contener entre 4 y 20 caracteres")
+    @Size(min = 3, max = 40, message = "el nombre debe contener entre 4 y 20 caracteres")
     @Column
     private String nombre;
     
     
-    @Min(0) @Max(100)
+    @Min(1) @Max(100)
     @NotNull
     @Column
     private int porcentaje;
