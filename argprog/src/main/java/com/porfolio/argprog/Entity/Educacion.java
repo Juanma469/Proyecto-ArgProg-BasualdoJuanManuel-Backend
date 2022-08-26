@@ -27,7 +27,7 @@ public class Educacion {
     
     
     @NotBlank
-    @Size(min = 10, max= 200, message = "la descripcion debe contener entre 10 y 200 caracteres)")
+    @Size(min = 10, max = 200, message = "la descripcion debe contener entre 10 y 200 caracteres)")
     @Column(length = 300)
     private String descripcion;
     
