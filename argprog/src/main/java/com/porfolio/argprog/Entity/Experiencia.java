@@ -20,11 +20,11 @@ public class Experiencia {
     
    
     @NotBlank
-<<<<<<< HEAD
+
     @Size(min = 4, max=40, message = "el nombre debe contener entre 4 y 40 caracteres")
-=======
+
     @Size(min = 4, max=40, message = "el nombre debe contener entre 4 y 20 caracteres")
->>>>>>> fa1730abd64b10663c3dd9ea8e612d3f898857be
+
     @Column
     private String titulo;
     

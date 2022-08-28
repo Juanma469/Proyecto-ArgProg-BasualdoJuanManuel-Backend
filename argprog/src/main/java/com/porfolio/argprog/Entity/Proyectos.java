@@ -20,7 +20,7 @@ public class Proyectos {
     
     
     @NotBlank
-    @Size(min = 10, max = 20, message = "el nombre debe contener entre 10 y 20 caracteres)")
+    @Size(min = 4, max = 40, message = "el nombre debe contener entre 4 y 20 caracteres)")
     @Column
     private String nombre;
     
@@ -32,12 +32,14 @@ public class Proyectos {
     
     
     @NotBlank
-    @Size(min = 10, max= 200, message = "el titulo debe contener entre 10 y 20 caracteres)")
+    @Size(min = 10, max= 200, message = "la descripcion debe contener entre 10 y 20 caracteres)")
     @Column(length = 300)
     private String descripcion;
     
     
     
+     @Column
+     private String link;
     
     @NotNull
     @Min(1965) @Max(2022)
@@ -45,6 +47,8 @@ public class Proyectos {
     private int fecha;
     
     private String img;
+    
+    
     
     public Proyectos(){}
 

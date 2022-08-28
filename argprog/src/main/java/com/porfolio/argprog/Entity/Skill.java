@@ -25,11 +25,8 @@ public class Skill {
     private String nombre;
     
     
-<<<<<<< HEAD
+
     @Min(1) @Max(100)
-=======
-    
->>>>>>> fa1730abd64b10663c3dd9ea8e612d3f898857be
     @NotNull
     @Min(0) @Max(100)
     @Column
