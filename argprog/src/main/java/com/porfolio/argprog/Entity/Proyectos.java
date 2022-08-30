@@ -1,4 +1,4 @@
-
+    
 package com.porfolio.argprog.Entity;
 
 import javax.persistence.Column;
@@ -29,6 +29,8 @@ public class Proyectos {
     @Size(min = 3, max = 200, message = "la tecnologias debe contener entre 3 y 100 caracteres)")
     @Column
     private String tecno;
+
+   
     
     
     @NotBlank
@@ -84,6 +86,15 @@ public class Proyectos {
         this.descripcion = descripcion;
     }
 
+     public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+    
+    
     public int getFecha() {
         return fecha;
     }

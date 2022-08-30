@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -45,13 +46,19 @@ public class Usuario implements Serializable {
 
         @Column
         private String linkedin;
+        
+        @Column
+        @Email
+        private String email;
+
+  
 
 
 
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String img, String linkein) {
+    public Usuario(Long id, String nombre, String apellido, String titulo, String descripcion, String img, String linkein, String email) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -59,16 +66,11 @@ public class Usuario implements Serializable {
         this.descripcion = descripcion;
         this.img = img;
         this.linkedin = linkein;
+        this.email = email;
        
     }
 
-    public String getLinkedin() {
-        return linkedin;
-    }
-
-    public void setLinkedin(String linkedin) {
-        this.linkedin = linkedin;
-    }
+   
 
     public Long getId() {
         return id;
@@ -104,6 +106,22 @@ public class Usuario implements Serializable {
 
     public String getDescripcion() {
         return descripcion;
+    }
+    
+     public String getLinkedin() {
+        return linkedin;
+    }
+
+    public void setLinkedin(String linkedin) {
+        this.linkedin = linkedin;
+    }
+    
+      public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setDescripcion(String descripcion) {
